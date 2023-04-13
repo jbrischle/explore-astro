@@ -1,5 +1,6 @@
 ---
 import Routes from "../components/routes.astro";
+
 const identity = {
   firstName: "Janick",
   lastName: "Brischle",
@@ -12,6 +13,8 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
 ---
 
 <body>
@@ -32,7 +35,7 @@ const goal = 3;
 
   <div>
     <p>My skills are:</p>
-    <ul>
+    <ul class="skill">
       {skills.map((skill) => <li>{skill}</li>)}
     </ul>
   </div>
@@ -48,4 +51,16 @@ const goal = 3;
       <p>My goal is not 3 days.</p>
     )
   }
+
+  <style define:vars={{ skillColor }}>
+    h1 {
+      color: purple;
+      font-size: 4rem;
+    }
+
+    .skill {
+      color: var(--skillColor);
+      font-weight: bold;
+    }
+  </style>
 </body>
