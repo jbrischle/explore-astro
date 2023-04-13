@@ -1,9 +1,23 @@
-<body>
-  <a href="/explore-astro">Home</a>
-  <a href="/explore-astro/about/">About</a>
-  <a href="/explore-astro/cv/">CV</a>
+---
+import Routes from "../components/routes.astro";
+const identity = {
+  firstName: "Janick",
+  lastName: "Brischle",
+  country: "Germany",
+  occupation: "Software Developer",
+};
 
-  <h1>Janick Brischle</h1>
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+
+<body>
+  <Routes />
+
+  <h1>{identity.firstName} {identity.lastName}</h1>
   <h2>... and my new Astro site!</h2>
 
   <p>
@@ -15,4 +29,23 @@
     This site will update as I complete more of the tutorial, so keep checking
     back and see how my journey is going!
   </p>
+
+  <div>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+  </div>
+
+  {happy && <p>I am happy to be learning Astro!</p>}
+
+  {finished && <p>I finished this tutorial!</p>}
+
+  {
+    goal === 3 ? (
+      <p>My goal is to finish in 3 days.</p>
+    ) : (
+      <p>My goal is not 3 days.</p>
+    )
+  }
 </body>
