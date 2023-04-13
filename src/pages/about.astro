@@ -1,5 +1,7 @@
 ---
 import Routes from "../components/routes.astro";
+import Footer from "../components/footer.astro";
+import PageLayout from "../layouts/pageLayout.astro";
 
 const identity = {
   firstName: "Janick",
@@ -17,9 +19,7 @@ const goal = 3;
 const skillColor = "navy";
 ---
 
-<body>
-  <Routes />
-
+<PageLayout title="home">
   <h1>{identity.firstName} {identity.lastName}</h1>
   <h2>... and my new Astro site!</h2>
 
@@ -51,16 +51,16 @@ const skillColor = "navy";
       <p>My goal is not 3 days.</p>
     )
   }
+</PageLayout>
 
-  <style define:vars={{ skillColor }}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
+<style define:vars={{ skillColor }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
 
-    .skill {
-      color: var(--skillColor);
-      font-weight: bold;
-    }
-  </style>
-</body>
+  .skill {
+    color: var(--skillColor);
+    font-weight: bold;
+  }
+</style>

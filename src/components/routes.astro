@@ -1,3 +1,35 @@
-<a href="/explore-astro">Home</a>
-<a href="/explore-astro/about/">About</a>
-<a href="/explore-astro/cv/">CV</a>
+<nav class="nav-links">
+  <a href="/explore-astro/">Home</a>
+  <a href="/explore-astro/about/">About</a>
+  <a href="/explore-astro/cv/">CV</a>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: #ff9776;
+    margin: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover,
+  a:focus {
+    background-color: #ff9776;
+  }
+</style>
