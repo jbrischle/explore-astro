@@ -8,16 +8,37 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/explore-astro/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <nav>
+    <nav class="sticky__top">
       <Routes />
     </nav>
     <article>
       <slot />
     </article>
-    <Footer />
+    <Footer class="sticky__bottom" />
   </body>
 </html>
+
+<style>
+  article {
+    padding: 1rem;
+    overflow: auto;
+  }
+
+  .sticky__top {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .sticky__bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+  }
+</style>
