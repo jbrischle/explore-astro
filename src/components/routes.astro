@@ -1,17 +1,25 @@
-<div class="nav-links">
-  <a href=`${import.meta.env.BASE_URL}`>Home</a>
-  <a href=`${import.meta.env.BASE_URL}about/`>About</a>
-  <a href=`${import.meta.env.BASE_URL}cv/`>CV</a>
-</div>
+<header class="nav-bar">
+  <div class="nav-links">
+    <a href=`${import.meta.env.BASE_URL}`>Home</a>
+    <a href=`${import.meta.env.BASE_URL}about/`>About</a>
+    <a href=`${import.meta.env.BASE_URL}cv/`>CV</a>
+  </div>
+</header>
 
 <style>
+  header {
+    background-color: var(--baseColor);
+    display: flex;
+    justify-content: center;
+  }
+
   .nav-links {
+    max-width: var(--content-box__max-width);
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     gap: 1rem;
     width: 100%;
-    background-color: var(--baseColor);
     margin: 0;
   }
 

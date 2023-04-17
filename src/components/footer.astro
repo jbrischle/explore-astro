@@ -3,23 +3,22 @@ import github from "../assets/github.svg";
 ---
 
 <footer>
-  <a href="https://github.com/jbrischle/" target="_blank">
-    <img alt="janick brischle github" src={github} />
-  </a>
+  <div class="content">
+    <a href="https://github.com/jbrischle/" target="_blank">
+      <img alt="janick brischle github" src={github} />
+    </a>
+  </div>
 </footer>
 
 <style>
-  img {
-    height: 85%;
-    object-fit: scale-down;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-  }
-
   footer {
+    background-color: var(--baseColor);
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    max-width: var(--content-box__max-width);
     display: flex;
     gap: 1rem;
     padding: 1rem;
@@ -27,5 +26,15 @@ import github from "../assets/github.svg";
     height: 20vh;
     background-color: var(--baseColor);
     color: var(--baseText);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  a img {
+    height: 85%;
+    object-fit: scale-down;
   }
 </style>
