@@ -21,7 +21,7 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bodyli">
+  <body class="content-body">
     <nav class="sticky__top">
       <Header />
     </nav>
@@ -35,7 +35,7 @@ import "../styles/global.css";
 </html>
 
 <style>
-  .bodyli {
+  .content-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -50,7 +50,7 @@ import "../styles/global.css";
   }
 
   article .content {
-    max-width: var(--content-box__max-width);
+    width: var(--content-box__max-width);
   }
 
   .sticky__top {
