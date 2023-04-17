@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/footer.astro";
-import Routes from "../components/routes.astro";
+import Header from "../components/header.astro";
 const { title } = Astro.props;
 import "../styles/global.css";
 ---
@@ -21,9 +21,9 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bodyli">
     <nav class="sticky__top">
-      <Routes />
+      <Header />
     </nav>
     <article>
       <div class="content">
@@ -35,7 +35,14 @@ import "../styles/global.css";
 </html>
 
 <style>
+  .bodyli {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   article {
+    flex: 1;
     padding: 1rem;
     overflow: auto;
     display: flex;
