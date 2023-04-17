@@ -26,7 +26,7 @@ import "../styles/global.css";
       <Routes />
     </nav>
     <article>
-      <slot />
+      <slot class="content" />
     </article>
     <Footer class="sticky__bottom" />
   </body>
@@ -36,6 +36,12 @@ import "../styles/global.css";
   article {
     padding: 1rem;
     overflow: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  article .content {
+    max-width: var(--content-box__max-width);
   }
 
   .sticky__top {
