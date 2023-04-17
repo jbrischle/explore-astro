@@ -4,7 +4,7 @@ html {
     --content-box__max-width: 98vw;
 
     background-color: #f1f5f9;
-    font-family: sans-serif;
+    font-family: "SORA", "Roboto Light", "Roboto Thin", sans-serif;
 }
 
 body {
