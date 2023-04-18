@@ -1,8 +1,8 @@
 html {
     /*TODO: search matching color pallette --baseColor: #016367;*/
-    --baseColor: #016367;
-    --baseColorText: ghostwhite;
-    --baseColorAccent: #947062;
+    --baseColor: #1D201F;
+    --baseColorText: #D1DEDE;
+    --baseColorAccent: #EAD2AC;
     --baseColorBackground: #D2D8E0;
 
     --content-box__max-width: 100dvw;
