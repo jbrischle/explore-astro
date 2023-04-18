@@ -5,7 +5,7 @@ html {
     --baseColorAccent: #947062;
     --baseColorBackground: #D2D8E0;
 
-    --content-box__max-width: 98vw;
+    --content-box__max-width: 100dvw;
 
     background-color: var(--baseColorBackground);
     font-family: "SORA", "Roboto Light", "Roboto Thin", sans-serif;
